@@ -1,0 +1,25 @@
+# IDE files
+.idea/
+.vscode/
+
+# Binaries and build artifacts
+bin/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environment files
+.env
+*.env
+
+# Temporary files
+tmp/
+
+# Go specific
+vendor/
+
+# Docker volumes
+postgres_data/
+redis_data/
