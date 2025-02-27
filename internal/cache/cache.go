@@ -2,6 +2,7 @@ package cache
 
 import (
 	"context"
+	"fmt"
 	"time"
 )
 
@@ -21,10 +22,10 @@ type Cache interface {
 
 // UserCacheKey generates a cache key for a user
 func UserCacheKey(userID int64) string {
-	return "user:" + string(userID)
+	return fmt.Sprintf("user:%d", userID)
 }
 
 // PostCacheKey generates a cache key for a post
 func PostCacheKey(postID int64) string {
-	return "post:" + string(postID)
+	return fmt.Sprintf("post:%d", postID)
 }
