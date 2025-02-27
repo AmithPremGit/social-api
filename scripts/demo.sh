@@ -21,6 +21,8 @@ REGISTER_RESPONSE=$(curl -s -X POST "$BASE_URL/users" \
   -d "{\"username\":\"$RANDOM_USERNAME\",\"email\":\"$RANDOM_EMAIL\",\"password\":\"password123\"}")
 echo $REGISTER_RESPONSE | jq
 TOKEN=$(echo $REGISTER_RESPONSE | jq -r '.data.token')
+echo $REGISTER_RESPONSE | jq
+TOKEN=$(echo $REGISTER_RESPONSE | jq -r '.data.token')
 
 # Basic error handling
 if [ -z "$TOKEN" ] || [ "$TOKEN" == "null" ]; then
